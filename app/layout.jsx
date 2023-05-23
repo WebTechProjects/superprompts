@@ -1,5 +1,8 @@
 import '@styles/global.css'
 
+import Navbar from "@components/Navbar";
+// import Provider from "@components/Provider";
+
 export const metadata ={
     title: "folio",
     description: "make your portfolio now"
@@ -17,6 +20,7 @@ const RootLayout = ({children}) => {
                 </div>
             </div>
             <main className="app">
+            <Navbar />
                 {children}
             </main>
         </body>
