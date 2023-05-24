@@ -4,8 +4,8 @@ import Navbar from "@components/Navbar";
 // import Provider from "@components/Provider";
 
 export const metadata ={
-    title: "folio",
-    description: "make your portfolio now"
+    title: "superprompts",
+    description: "super-prompts"
 }
 
 import React from 'react'
