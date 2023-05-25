@@ -4,7 +4,7 @@ import Navbar from "@components/Navbar";
 
 export const metadata ={
     title: "superprompts",
-    description: "super-prompts"
+    description: "superprompts"
 }
 
 import React from 'react'
