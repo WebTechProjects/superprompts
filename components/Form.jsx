@@ -32,9 +32,6 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         <label>
           <span className='font-satoshi font-semibold text-base text-gray-700'>
             Field of Prompt{" "}
-            <span className='font-normal'>
-              (#product, #webdevelopment, #idea, etc.)
-            </span>
           </span>
           <input
             value={post.tag}
