@@ -1,32 +1,28 @@
-import '@styles/global.css'
+import "@styles/global.css"
 
+import Provider from "@components/Provider";
 import Navbar from "@components/Navbar";
 
-export const metadata ={
-    title: "superprompts",
-    description: "superprompts"
-}
+export const metadata = {
+  title: "superprompts",
+    description: "superprompts",
+};
 
-import React from 'react'
-import Provider from '@components/Provider';
+const RootLayout = ({ children }) => (
+  <html lang='en'>
+    <body>
+      <Provider>
+        <div className='main'>
+          <div className='gradient' />
+        </div>
 
-const RootLayout = ({children}) => {
-  return (
-    <html lang="en">
-        <body>
-            <Provider>
-            <div className="main">
-                <div className="gradient">
-                </div>
-            </div>
-            <main className="app">
-            <Navbar />
-                {children}
-            </main>
-            </Provider>
-        </body>
-    </html>
-  )
-}
+        <main className='app'>
+          <Navbar />
+          {children}
+        </main>
+      </Provider>
+    </body>
+  </html>
+);
 
-export default RootLayout
+export default RootLayout;
