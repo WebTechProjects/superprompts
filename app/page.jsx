@@ -7,7 +7,7 @@ const Home = () => {
       Super Prompts
     </h1>
     <p className='desc text-center'>
-    Community of best AI Prompts
+    Community of best AI Prompts for ChatGPT, Midjourney, DALL-E, BARD & more...
     </p>
     <Feed />
   </section>
