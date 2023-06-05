@@ -19,8 +19,13 @@
   pointer-events: none;
 }
 
+/* .main:before {
+ @apply bg-[conic-gradient(var(--tw-gradient-stops))];
+  background: radial-gradient(circle, #313131 10%, #161616 100%)
+} */
 .main:before {
   background: radial-gradient(circle, #313131 10%, #161616 100%);
+  /* background: conic-gradient(var(--tw-gradient-stops)); */
   position: absolute;
   content: "";
   z-index: 2;
@@ -31,8 +36,8 @@
 
 .main:after {
   content: "";
-  background-image: url("/public/grid.svg");
-  z-index: 1;
+  background-image: url("/grid.svg");
+  z-index: 2;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -115,11 +120,11 @@
 }
 
 .search_input {
-  @apply block w-full rounded-md border border-gray-200 bg-white py-2.5 font-satoshi pl-5 pr-12 text-sm shadow-lg font-medium focus:border-black focus:outline-none focus:ring-0;
+  @apply block w-full rounded-md bg-violet-100 py-2.5 font-satoshi pl-5 pr-12 text-sm shadow-lg font-medium focus:outline-none focus:ring-0;
 }
 
 .copy_btn {
-  @apply w-7 h-7 rounded-full bg-white/10 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur flex justify-center items-center cursor-pointer;
+  @apply w-7 h-7 rounded-full border border-gray-700 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur flex justify-center items-center cursor-pointer;
 }
 
 .glassmorphism {
