@@ -20,12 +20,52 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
     router.push(`/profile/${post.creator._id}?name=${post.creator.username}`);
   };
 
-  //to do: copy for mobile device also
+  //this code only works for pc
+  // const handleCopy = () => {
+  //   setCopied(post.prompt);
+  //   navigator.clipboard?.writeText(post.prompt);
+  //   // setTimeout(() => setCopied(false), 3000);
+  // };
+
+  // this works for both pc as well as mobile devices
   const handleCopy = () => {
-    setCopied(post.prompt);
-    navigator.clipboard?.writeText(post.prompt);
-    // setTimeout(() => setCopied(false), 3000);
+    const promptText = post.prompt;
+  
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(promptText)
+        .then(() => {
+          setCopied(promptText);
+          console.log('Prompt copied to clipboard');
+        })
+        .catch((error) => {
+          console.error('Failed to copy prompt:', error);
+        });
+    } else {
+      // Fallback for browsers that do not support the Clipboard API
+      const textArea = document.createElement('textarea');
+      textArea.value = promptText;
+      textArea.style.position = 'fixed';
+      textArea.style.opacity = 0;
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+  
+      try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+          setCopied(promptText);
+          console.log('Prompt copied to clipboard');
+        } else {
+          console.error('Failed to copy prompt');
+        }
+      } catch (error) {
+        console.error('Failed to copy prompt:', error);
+      }
+  
+      document.body.removeChild(textArea);
+    }
   };
+  
 
 
   return (
