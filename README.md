@@ -18,7 +18,7 @@ NEXTAUTH_URL_INTERNAL = http://localhost:3000
 NEXTAUTHSECRET = [a random secret key] for eg: tvDWxlmy4Weqt2Ky6er7rhBbeft98BsyHspzqHPmkuD=
 
 ```
-4. Start a new terminal and run development server
+4. Start a new terminal and run the development server
 ```
 npm run dev
 ```
